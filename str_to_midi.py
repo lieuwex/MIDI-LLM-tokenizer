@@ -5,6 +5,8 @@ import midi_util
 from midi_util import VocabConfig
 
 if __name__ == "__main__":
+    curr_dir = os.path.dirname(os.path.realpath(__file__))
+
     p = argparse.ArgumentParser()
     p.add_argument(
         "text",
@@ -20,7 +22,7 @@ if __name__ == "__main__":
     p.add_argument(
         "--vocab_config",
         type=str,
-        default="./vocab_config.json",
+        default=f"{curr_dir}/vocab_config.json",
         help="Path to vocab config file",
     )
 
