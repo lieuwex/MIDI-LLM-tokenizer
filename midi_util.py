@@ -444,8 +444,9 @@ def convert_midi_to_str(cfg: VocabConfig, filter_cfg: FilterConfig, mid: mido.Mi
 
     flush_token_data_buffer()
     output.append("<end>")
-    if output_length_ms > filter_cfg.min_piece_length * 1000.0:
-        output_list.append(" ".join(output))
+    output_list.append(" ".join(output))
+    #if output_length_ms > filter_cfg.min_piece_length * 1000.0:
+    #    output_list.append(" ".join(output))
     return output_list
 
 
